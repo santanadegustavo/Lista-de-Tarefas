@@ -1,32 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --cor-fundo: #0A1120;
+  --cor-superficie: #172554;
+  --cor-primaria: #3B82F6;
+  --cor-primaria-hover: #2563EB;
+  --cor-secundaria: #60A5FA;
+  --cor-texto: #F8FAFC;
+  --cor-texto-suave: #CBD5E1;
+  --cor-borda: #3B82F6;
+  --cor-input: #F8FAFC;
+  --cor-input-texto: #1E293B;
+  --cor-input-borda: #64748B;
+  --cor-botao: #2563EB;
+  --cor-botao-hover: #1D4ED8;
+  --cor-sucesso: #16A34A;
+  --cor-sucesso-hover: #15803D;
+  --cor-perigo: #DC2626;
+  --cor-perigo-hover: #B91C1C;
+  --cor-concluida: #22C55E;
+  --cor-sombra: rgba(0, 0, 0, 0.35);
+}
+
 body {
     font-family: Arial, sans-serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #331F19; 
+
+    background-color: var(--cor-fundo); 
 }
+
 .container {
+    background-color: var(--cor-superficie);
     text-align: center;
-    background-color: #CBBBA7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    box-shadow: 0 4px 8px var();
+    padding: 30px;
     width: 90%;
     max-width: 600px;
-    border: 2px solid #8B7D70;
+
+    border-radius: 8px;
+    border: 2px solid var(--cor-secundaria);
 }
+
 h1 {
-    color: #331F19;
+    color: var(--cor-texto);
 }
+
 p {
-    color: #331F19;
+    color: var(--cor-texto-suave);
     font-size: 1.1em;
 }
+
 button {
-    background-color: #798252;
-    color: #F4F0EA;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -35,22 +71,25 @@ button {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
+
 button:hover {
-    background-color: #CCD595;
-    color: #504e4d;
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-suave);
 }
+
 ul {
     list-style: none;
     padding: 0;
     margin-top: 20px;
 }
+
 ul li {
     background-color: #F4F0EA;
     color: #331F19;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--cor-sombra);
 }
 
 /* Estilo para o campo de entrada */
@@ -60,44 +99,56 @@ input[type="text"] {
     max-width: 500px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 2px solid #8B7D70;
+    border: 2px solid var(--cor-input-borda);
     border-radius: 5px;
     font-size: 1em;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--cor-sombra);
     outline: none;
     transition: border-color 0.3s ease;
 }
+
 input[type="text"]:focus {
     border-color: #60041A;
-    box-shadow: inset 0 2px 4px rgba(96, 4, 26, 0.3);
+    box-shadow: inset 0 2px 4px var(--cor-sombra);
 }
+
 button.remover {
-    background-color: #A34743;
+    background-color: var(--cor-perigo);
     color: #F4F0EA;
+    
+    margin-left: 5px;
     padding: 5px 5px;
     border: none;
+
     border-radius: 5px;
     cursor: pointer;
+
     font-size: 0.6em;
-    margin-left: 5px;
+    
     transition: background-color 0.3s ease;
 }
 button.remover:hover {
-    background-color: #60041A;
+    background-color: var(--cor-perigo-hover);
 }
+
 button.editar {
     background-color: #331F19;
     color: #F4F0EA;
+    
+    margin-left: 5px;
     padding: 5px 5px;
     border: none;
+
     border-radius: 5px;
     cursor: pointer;
+
     font-size: 0.6em;
-    margin-left: 5px;
+    
     transition: background-color 0.3s ease;
 }
+
 button.editar:hover {
-    background-color: #744d41;
+    background-color: var(--cor-secundaria);
 }
 
 .botao_lista {
